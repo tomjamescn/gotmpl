@@ -20,6 +20,9 @@ go get github.com/tomjamescn/gotmpl
 #using test_data including in gotmpl src directory
 cd $GOPATH/github/tomjamescn/gotmpl
 gotmpl -bindingDataPath `pwd`/test_data/test.json -templatePath `pwd`/test_data -outputPath /tmp/gotmpl/output/test
+
+#using input arguments as binding data
+gotmpl -templatePath `pwd`/test_data -outputPath /tmp/gotmpl/output/test index=index
 ```
 
 # thanks

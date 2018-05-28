@@ -105,6 +105,16 @@ func main() {
 	flag.StringVar(&outputPath, "outputPath", curDirPath, "output path")
 	flag.StringVar(&bindingDataPath, "bindingDataPath", "", "data for variables in template, can be a yaml or json file path")
 	flag.Parse()
+
+	context := make([]interface{}, 0)
+	if bindingDataPath != "" {
+		bindingData, err := parseBindingData(bindingDataPath)
+		if err != nil {
+			panic(err)
+		}
+		context = append(context, bindingData)
+	}
+
 	for _, v := range flag.Args() {
 		kv := strings.SplitN(v, "=", 2)
 		if len(kv) != 2 {
@@ -113,9 +123,8 @@ func main() {
 		bindingDatasFromArgs[kv[0]] = kv[1]
 	}
 
-	bindingData, err := parseBindingData(bindingDataPath)
-	if err != nil {
-		panic(err)
+	if len(bindingDatasFromArgs) > 0 {
+		context = append(context, bindingDatasFromArgs)
 	}
 
 	templateFilePaths, err := listTemplateFilePath(templatePath)
@@ -123,7 +132,7 @@ func main() {
 		panic(err)
 	}
 	for _, p := range templateFilePaths {
-		if err = renderAndSave(p, templatePath, outputPath, bindingDatasFromArgs, bindingData); err != nil {
+		if err = renderAndSave(p, templatePath, outputPath, context...); err != nil {
 			panic(err)
 		}
 	}
