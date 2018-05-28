@@ -10,11 +10,6 @@ Maybe [Mustache for Golang](https://github.com/cbroglie/mustache) is already a g
 - comment for binding data
 - may be more...
 
-# prequire
-```sh
-go get github.com/cbroglie/mustache/...
-```
-
 # install
 ```sh
 go get github.com/tomjamescn/gotmpl
@@ -26,7 +21,6 @@ go get github.com/tomjamescn/gotmpl
 cd $GOPATH/github/tomjamescn/gotmpl
 gotmpl -bindingDataPath `pwd`/test_data/test.json -templatePath `pwd`/test_data -outputPath /tmp/gotmpl/output/test
 ```
-
 
 # thanks
 - [Mustache](https://mustache.github.io/)
