@@ -15,7 +15,17 @@ Maybe [Mustache for Golang](https://github.com/cbroglie/mustache) is already a g
 go get github.com/cbroglie/mustache/...
 ```
 
+# install
+```sh
+go get github.com/tomjamescn/gotmpl
+```
+
 # use
+```sh
+#using test_data including in gotmpl src directory
+cd $GOPATH/github/tomjamescn/gotmpl
+gotmpl -bindingDataPath `pwd`/test_data/test.json -templatePath `pwd`/test_data -outputPath /tmp/gotmpl/output/test
+```
 
 
 # thanks
