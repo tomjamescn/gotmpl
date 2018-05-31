@@ -1,7 +1,9 @@
-# gotmpl
-Template generation tools stands for GOlang TeMPLate.
+> [中文版README.md](https://github.com/tomjamescn/gotmpl/blob/master/main.go)
 
-Maybe [Mustache for Golang](https://github.com/cbroglie/mustache) is already a good solution for single template generation, BUT, it is not perfect because it does not support folder name including placeholder, more binding data input format, comment for binding data and etc.
+# gotmpl
+Template tools stands for GOlang TeMPLate.
+
+Maybe [Mustache for Golang](https://github.com/cbroglie/mustache) is already a good solution for single template, BUT, it is not perfect because it does not support folder name including placeholder, more binding data input format, comment for placeholder and etc.
 
 # feature
 - [x] using [Mustache](https://mustache.github.io/) sytanx for template file
