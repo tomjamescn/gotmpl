@@ -7,9 +7,9 @@ Maybe [Mustache for Golang](https://github.com/cbroglie/mustache) is already a g
 - [x] using [Mustache](https://mustache.github.io/) sytanx for template file
 - [x] support placeholder in folder name
 - [x] json file, yaml file and input arguments as binding data
-- [ ] summary for all placeholder
-- [ ] comment support for placeholder
-- [ ] git repository as template path
+- [x] summary for all placeholder
+- [x] comment support for placeholder
+- [x] git repository as template path, support https:// http:// git:// ssh:// protocals
 - may be more...
 
 # install
@@ -28,6 +28,10 @@ gotmpl -t `pwd`/test_data -o /tmp/gotmpl/output/test index=index
 
 #show summary for all placeholder
 gotmpl -t `pwd`/test_data -s 
+
+#using repository as template path
+#if using private repository, ssh-copy-id must be executed before!
+gotmpl -t https://github.com/tomjamescn/gotmpl -s test_data -o /tmp/output index=TEST dir_name=TEST
 
 ```
 
