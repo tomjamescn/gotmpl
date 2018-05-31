@@ -7,9 +7,9 @@ Maybe [Mustache for Golang](https://github.com/cbroglie/mustache) is already a g
 - [x] using [Mustache](https://mustache.github.io/) sytanx for template file
 - [x] support placeholder in folder name
 - [x] json file, yaml file and input arguments as binding data
-- [] summary for all placeholder
-- [] comment support for placeholder
-- [] git repository as template path
+- [ ] summary for all placeholder
+- [ ] comment support for placeholder
+- [ ] git repository as template path
 - may be more...
 
 # install
