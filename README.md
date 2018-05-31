@@ -1,4 +1,4 @@
-> [中文版README.md](https://github.com/tomjamescn/gotmpl/blob/master/main.go)
+> [中文版README.md](https://github.com/tomjamescn/gotmpl/blob/master/README_zh-cn.md)
 
 # gotmpl
 Template tools stands for GOlang TeMPLate.
